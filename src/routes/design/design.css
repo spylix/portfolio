@@ -1,0 +1,128 @@
+#design-landing {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+#design-heading {
+  margin-top: 100px;
+  margin-left: -100px;
+  width: 100%;
+  text-align: center;
+  transition: 0.6s;
+}
+
+#design-description {
+  position: absolute;
+  left: 100px;
+  top: 250px;
+  width: 30vw;
+  transition: 0.6s;
+}
+
+#design-background {
+  position: absolute;
+  right: 0;
+  transition: 0.6s;
+  z-index: -1;
+}
+
+#design-laptop {
+  position: absolute;
+  left: 10vw;
+  bottom: 200px;
+  transition: 0.6s;
+}
+
+#design-stripe {
+  --first-break: 30%;
+  --second-break: 45.5%;
+  --third-break: 75%;
+  --forth-break: 80%;
+  --fifth-break: 88%;
+  --sixth-break: 97%;
+
+  --first-color: #cc5252;
+  --second-color: #ccc752;
+  --third-color: #52cc8a;
+  --forth-color: #52c5cc;
+  --fifth-color: #526dcc;
+  --sixth-color: #ca52cc;
+  --seventh-color: #cc5286;
+
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  overflow: hidden;
+}
+
+.design-stripe-color {
+  transition: 0.5s;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.design-stripe-color:nth-child(1) {
+  background: var(--first-color);
+  width: var(--first-break);
+  left: 0;
+  z-index: 1;
+}
+
+.design-stripe-color:nth-child(2) {
+  background: var(--second-color);
+  width: var(--second-break);
+  left: 0;
+}
+
+.design-stripe-color:nth-child(3) {
+  background: var(--third-color);
+  width: calc(100% - var(--second-break));
+  right: 0;
+}
+
+.design-stripe-color:nth-child(4) {
+  background: var(--forth-color);
+  width: calc(100% - var(--third-break));
+  right: 0;
+}
+
+.design-stripe-color:nth-child(5) {
+  background: var(--fifth-color);
+  width: calc(100% - var(--forth-break));
+  right: 0;
+}
+
+.design-stripe-color:nth-child(6) {
+  background: var(--sixth-color);
+  width: calc(100% - var(--fifth-break));
+  right: 0;
+}
+
+.design-stripe-color:nth-child(7) {
+  background: var(--seventh-color);
+  width: calc(100% - var(--sixth-break));
+  right: 0;
+}
+
+#design-stripe-label {
+  color: white;
+  font-size: 30px;
+  letter-spacing: 20px;
+  transition: letter-spacing 0.3s, transform 0.6s;
+  z-index: 1;
+}
+
+#design-stripe:hover > #design-stripe-label {
+  letter-spacing: 30px;
+}

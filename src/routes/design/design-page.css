@@ -1,0 +1,53 @@
+#design-body-heading {
+  width: 100%;
+  height: 70px;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.design-page-button {
+  --second-color: #ccc752;
+  --seventh-color: #cc5286;
+
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  width: 400px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.design-page-button:nth-child(1) {
+  left: 0;
+  background: var(--second-color);
+  color: #b59111;
+}
+
+.design-page-button:nth-child(2) {
+  right: 0;
+  background: var(--seventh-color);
+  color: #7d0538;
+}
+
+.design-page-button > span {
+  position: relative;
+  top: -50px;
+  font-size: 30px;
+  line-height: 40px;
+  width: 100%;
+  letter-spacing: 10px;
+  transition: 0.3s;
+}
+
+.design-page-button:hover {
+  height: 150px;
+}
+
+.design-page-button:hover > span {
+  top: 0;
+}
