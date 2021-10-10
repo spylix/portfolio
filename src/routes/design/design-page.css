@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  transition: 0.3s;
 }
 
 .design-page-button {
@@ -42,6 +44,7 @@
   width: 100%;
   letter-spacing: 10px;
   transition: 0.3s;
+  opacity: 0;
 }
 
 .design-page-button:hover {

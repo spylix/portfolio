@@ -8,13 +8,21 @@
   };
 
   let isEnlargedPhoto = false;
+  let enlargedPhotoOpacity = 0;
+
   const toggleEnlargedPhoto = () => {
     if (isEnlargedPhoto) {
-      isEnlargedPhoto = false;
+        enlargedPhotoOpacity = 0;
       document.getElementsByTagName("body")[0].style.overflow = "";
+      setTimeout(() => {
+      isEnlargedPhoto = false;
+      }, 300);
     } else {
       isEnlargedPhoto = true;
       document.getElementsByTagName("body")[0].style.overflow = "hidden";
+      setTimeout(() => {
+        enlargedPhotoOpacity = 1;
+      }, 0);
     }
   };
 </script>
@@ -51,7 +59,7 @@
   </div>
 
   {#if isEnlargedPhoto}
-    <div id="enlarged-photo">
+    <div id="enlarged-photo" style={`opacity: ${enlargedPhotoOpacity}`}>
       <div class="enlarged-photo-buttons">
         <button class="enlarged-photo-button">#</button>
         <button class="enlarged-photo-button">#</button>

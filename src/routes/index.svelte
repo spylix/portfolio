@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import { Router, Route } from "svelte-routing";
   import Main from "./main/main.svelte";
   import Photos from "./photos/photos.svelte";
