@@ -4,10 +4,10 @@ publish(
   "public", // path to public directory
   {
     branch: "gh-pages",
-    repo: "https://github.com/username/yourproject.git", // Update to point to your repository
+    repo: "https://github.com/spylix/portfolio.git",
     user: {
-      name: "Your name", // update to use your name
-      email: "Your Email address", // Update to use your email
+      name: "Paweł Stepaniuk",
+      email: "pawel66556655@gmail.com",
     },
   },
   () => {
